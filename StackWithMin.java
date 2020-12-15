@@ -1,6 +1,7 @@
 import java.util.Stack;
 
 public class StackWithMin{
+    //We can use another stack to track the mins
     Stack<Integer> mins;
     Stack<Integer> values;
 
