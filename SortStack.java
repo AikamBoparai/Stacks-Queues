@@ -3,13 +3,13 @@ class SortStack{
         Stack<Integer> buf = new Stack<Integer>();
         while(!s.isEmpty()){
             int tmp = s.pop();
-            while(!r.isEmpty() && r.peek() > tmp){
-                s.push(r.pop());
+            while(!buf.isEmpty() && buf.peek() > tmp){
+                s.push(buf.pop());
             }
-            r.push(tmp);
+            buf.push(tmp);
         }
-        while(!r.isEmpty()){
-            s.push(r.pop());
+        while(!buf.isEmpty()){
+            s.push(buf.pop());
         }
     }
     public static void main(String[] args) {
